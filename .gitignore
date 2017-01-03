@@ -20,3 +20,5 @@ tmp
 *.o
 *.a
 mkmf.log
+npm-debug.log
+node_modules/
