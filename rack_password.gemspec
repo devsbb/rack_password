@@ -6,8 +6,8 @@ require 'rack_password/version'
 Gem::Specification.new do |spec|
   spec.name          = "rack_password"
   spec.version       = RackPassword::VERSION
-  spec.authors       = ["Marcin Stecki", "Nick Chernyshev"]
-  spec.email         = ["marcin@netguru.pl", "nick.chernyshev@gmail.com"]
+  spec.authors       = ["Marcin Stecki", "Nick Chernyshev", "Konstantin Smirnov"]
+  spec.email         = ["marcin@netguru.pl", "nick.chernyshev@gmail.com", "thgala@gmail.com"]
   spec.summary       = %q{Small rack middleware to block your site from unwanted vistors.}
   spec.description   = %q{Small rack middleware to block your site from unwanted vistors. A little bit more convenient than basic auth - browser will ask you once for the password and then set a cookie to remember you - unlike the http basic auth it wont prompt you all the time.}
   spec.homepage      = ""
