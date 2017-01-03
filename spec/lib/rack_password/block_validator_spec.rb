@@ -59,6 +59,31 @@ describe RackPassword::BlockValidator do
     end
   end
 
+  describe "#valid_subdomain" do
+    let(:options) { Hash[domains_blacklist: ["secret"]] }
+
+    it "be true when subdomain is not blacklisted" do
+      request = double "Request", host: "public.gg.dev"
+      bv = RackPassword::BlockValidator.new(options, request)
+
+      expect(bv.valid_subdomain?).to be(true)
+    end
+
+    it "be true when subdomain is missing" do
+      request = double "Request", host: "gg.dev"
+      bv = RackPassword::BlockValidator.new(options, request)
+
+      expect(bv.valid_subdomain?).to be(true)
+    end
+
+    it "be false when subdomain is blacklisted" do
+      request = double "Request", host: "secret.gg.dev"
+      bv = RackPassword::BlockValidator.new(options, request)
+
+      expect(bv.valid_subdomain?).to be(false)
+    end
+  end
+
   describe "proc control" do
     context "with proc allowing to pass" do
       let(:options) { Hash[auth_codes: ["secret"], key: :staging_auth, custom_rule: proc { true } ] }
