@@ -1,0 +1,24 @@
+{
+  "name": "rack_password",
+  "version": "1.0.0",
+  "description": "rack_password",
+  "main": "gulpfile.js",
+  "scripts": {
+    "minify": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devsbb/rack_password.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devsbb/rack_password/issues"
+  },
+  "homepage": "https://github.com/devsbb/rack_password#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^3.0.0"
+  }
+}
