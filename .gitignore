@@ -22,5 +22,6 @@ tmp
 mkmf.log
 npm-debug.log
 node_modules/
+.DS_Store
 .ruby-version
 .ruby-gemset
