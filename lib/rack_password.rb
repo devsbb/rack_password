@@ -4,7 +4,7 @@ module RackPassword
   class Block
     def initialize app, options = {}
       @app = app
-      @options = { key: :staging_auth, code_param: :code }.merge options
+      @options = { key: :grover_auth, code_param: :code }.merge options
     end
 
     def call env
